@@ -1,14 +1,9 @@
 import { FC } from "react";
 import { Content } from "@prismicio/client";
-import {
-  PrismicRichText,
-  PrismicText,
-  SliceComponentProps,
-} from "@prismicio/react";
+import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import PlaunLogo from "./PlainLogo";
 import Bounded from "@/app/components/Bounded";
 import ButtonLink from "@/app/components/ButtonLink";
-import { PrismicNextLink } from "@prismicio/next";
 
 /**
  * Props for `CallToAction`.

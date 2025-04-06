@@ -12,7 +12,7 @@ import { usePathname } from "next/navigation";
 type NavBarProps = {
   settings: Content.SettingsDocument;
 };
-export default function ({ settings }: NavBarProps) {
+export default function NavBar({ settings }: NavBarProps) {
   const [open, setOpen] = useState(false);
   const pathName = usePathname();
 
