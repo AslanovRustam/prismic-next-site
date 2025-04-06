@@ -1,11 +1,10 @@
 "use client";
 
-import React, { ReactNode, useRef } from "react";
+import React, { useRef } from "react";
 import clsx from "clsx";
 import { Content } from "@prismicio/client";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import usePrefersReducedMotion from "../../hooks/usePrefersReducedMotion";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import StylizedLogoMark from "./StylizedLogoMark";
 import {
