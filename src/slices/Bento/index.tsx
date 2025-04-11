@@ -8,6 +8,7 @@ import {
 } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 import Bounded from "@/app/components/Bounded";
+import AnimatedContent from "@/app/components/AnimatedContent";
 
 export type BentoProps = SliceComponentProps<Content.BentoSlice>;
 
@@ -17,21 +18,23 @@ const Bento: FC<BentoProps> = ({ slice }) => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <PrismicRichText
-        field={slice.primary.heading}
-        components={{
-          heading2: ({ children }) => (
-            <h2 className="text-center text-5xl font-medium text-balance md:text-7xl">
-              {children}
-            </h2>
-          ),
-          em: ({ children }) => (
-            <em className="from bg-gradient-to-b from-yellow-100 to-yellow-500 bg-clip-text text-transparent not-italic">
-              {children}
-            </em>
-          ),
-        }}
-      />
+      <AnimatedContent>
+        <PrismicRichText
+          field={slice.primary.heading}
+          components={{
+            heading2: ({ children }) => (
+              <h2 className="text-center text-5xl font-medium text-balance md:text-7xl">
+                {children}
+              </h2>
+            ),
+            em: ({ children }) => (
+              <em className="from bg-gradient-to-b from-yellow-100 to-yellow-500 bg-clip-text text-transparent not-italic">
+                {children}
+              </em>
+            ),
+          }}
+        />
+      </AnimatedContent>
       <div className="mx-auto mt-6 max-w-md text-center text-balance text-slate-300">
         <PrismicRichText field={slice.primary.body} />
       </div>

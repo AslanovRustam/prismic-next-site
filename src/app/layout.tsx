@@ -18,10 +18,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={dmSans.variable}>
-      <body className="font-dm-sans bg-[#070815] text-white">
+    <html lang="en" className={`${dmSans.variable} h-full`}>
+      <body className="font-dm-sans flex h-full min-h-screen flex-col bg-[#070815] text-white">
         <Header />
-        <main>{children}</main>
+        <main className="flex-grow">{children}</main>
         <Footer />
       </body>
       <PrismicPreview repositoryName={repositoryName} />

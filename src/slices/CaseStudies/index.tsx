@@ -9,6 +9,7 @@ import { createClient } from "@/prismicio";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import clsx from "clsx";
 import Bounded from "@/app/components/Bounded";
+import AnimatedContent from "@/app/components/AnimatedContent";
 
 /**
  * Props for `CaseStudies`.
@@ -38,9 +39,11 @@ const CaseStudies = async ({
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <h2 className="max-w-2xl text-center text-5xl font-medium text-balance md:text-7xl">
-        <PrismicText field={slice.primary.heading} />
-      </h2>
+      <AnimatedContent>
+        <h2 className="max-w-2xl text-center text-5xl font-medium text-balance md:text-7xl">
+          <PrismicText field={slice.primary.heading} />
+        </h2>
+      </AnimatedContent>
       <div className="mx-auto mt-6 max-w-md text-center text-balance text-slate-300">
         <PrismicRichText field={slice.primary.body} />
       </div>

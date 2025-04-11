@@ -8,6 +8,8 @@ import { MdMenu, MdClose } from "react-icons/md";
 import { useState } from "react";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
+import logo from "../../assets/aslanai_logo_transparent.png";
+import Image from "next/image";
 
 type NavBarProps = {
   settings: Content.SettingsDocument;
@@ -73,7 +75,7 @@ export default function NavBar({ settings }: NavBarProps) {
               return (
                 <PrismicNextLink
                   key={item.label}
-                  className="block px-3 text-3xl first:mt-8"
+                  className="block px-3 text-3xl first:mt-8 hover:bg-amber-300"
                   field={item.link}
                   onClick={toggleOpen}
                   aria-current={
@@ -110,7 +112,7 @@ export default function NavBar({ settings }: NavBarProps) {
               <li key={item.label}>
                 <PrismicNextLink
                   field={item.link}
-                  className="inline-flex min-h-11 items-center"
+                  className="inline-flex min-h-11 items-center rounded-full border border-blue-100/20 px-4 py-2 transition-colors duration-500 hover:bg-amber-100/10"
                   aria-current={
                     pathName.includes(asLink(item.link) as string)
                       ? "page"

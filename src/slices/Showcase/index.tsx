@@ -6,7 +6,7 @@ import { PrismicNextImage } from "@prismicio/next";
 import ButtonLink from "@/app/components/ButtonLink";
 import clsx from "clsx";
 import { PiArrowsClockwise, PiGear } from "react-icons/pi";
-import AnimatedContent from "./AnimatedContent";
+import AnimatedContent from "../../app/components/AnimatedContent";
 
 const icons = {
   gear: <PiGear />,
