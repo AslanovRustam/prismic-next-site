@@ -110,7 +110,7 @@ export default function NavBar({ settings }: NavBarProps) {
               <li key={item.label}>
                 <PrismicNextLink
                   field={item.link}
-                  className="inline-flex min-h-11 items-center"
+                  className="inline-flex min-h-11 items-center rounded-full border border-blue-100/20 px-4 py-2 transition-colors duration-300 outline-none hover:border-yellow-200/40 hover:text-yellow-300 focus:ring-yellow-300"
                   aria-current={
                     pathName.includes(asLink(item.link) as string)
                       ? "page"

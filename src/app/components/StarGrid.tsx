@@ -39,7 +39,7 @@ export default function StarGrid() {
             duration: 0.6,
             stagger: {
               grid: grid,
-              from: "edges",
+              from: "center",
               amount: 2,
             },
           },
@@ -52,7 +52,7 @@ export default function StarGrid() {
             duration: 0.6,
             stagger: {
               grid: grid,
-              from: "edges",
+              from: "center",
               amount: 3,
             },
           },
@@ -72,7 +72,7 @@ export default function StarGrid() {
             duration: 0.6,
             stagger: {
               grid: grid,
-              from: "edges",
+              from: "center",
               amount: 2,
             },
           },
@@ -85,7 +85,7 @@ export default function StarGrid() {
             duration: 0.6,
             stagger: {
               grid: grid,
-              from: "edges",
+              from: "center",
               amount: 3,
             },
           },
